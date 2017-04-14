@@ -32,7 +32,7 @@ namespace TechJobs.Controllers
         {
             if (column.Equals(JobFieldType.All))
             {
-                SearchJobsViewModel jobsViewModel = new SearchJobsViewModel();
+                BaseViewModel jobsViewModel = new BaseViewModel();
                 jobsViewModel.Jobs = jobData.Jobs;
                 jobsViewModel.Title =  "All Jobs";
                 return View("Jobs", jobsViewModel);

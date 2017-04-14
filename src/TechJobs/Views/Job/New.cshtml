@@ -16,5 +16,25 @@
         // TODO #5 - Create <select> dropdowns for other job fields (outside of this @{ } block)
     }
 
+    <div class="form-group">
+        <label asp-for="Location"></label>
+        <select asp-for="Location" asp-items="Model.Locations"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CoreComp"></label>
+        <select asp-for="CoreComp" asp-items="Model.CoreCompetencies">
+            <option>Please select one.</option>
+        </select>
+        
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PositionType"></label>
+        <select asp-for="PositionType" asp-items="Model.PositionTypes">
+            <option>Please select one.</option>
+        </select>
+    </div>
+
     <input type="submit" value="Add Job" />
 </form>

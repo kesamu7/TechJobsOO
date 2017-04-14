@@ -1,5 +1,6 @@
 ﻿@model TechJobs.ViewModels.SearchJobsViewModel
 
+
 <h1>@Model.Title</h1>
 
 <form action="/Search/Results">
@@ -13,7 +14,7 @@
                        name="Column"
                        id="@column"
                        value="@column" 
-                       checked="@checkedColumn"/>
+                       checked="@column"/>
                 <label for="@column">@column</label>
             </span>
         }
@@ -29,6 +30,8 @@
 
 <hr />
 
+
+
 @if (Model.Jobs != null)
 {
 
@@ -40,6 +43,7 @@
             <tr>
                 <td>Name</td>
                 <td>@job.Name</td>
+                
             </tr>
             <tr>
                 <td>Employer</td>

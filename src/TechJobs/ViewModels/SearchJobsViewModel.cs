@@ -39,5 +39,17 @@ namespace TechJobs.ViewModels
 
 
         }
+
+        public SearchJobsViewModel(Job myJob)
+            {
+                Jobs = new List<Job>();
+                
+                Jobs.Add(myJob);
+            }
+
+        public static implicit operator SearchJobsViewModel(NewJobViewModel v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
